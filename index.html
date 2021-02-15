@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta Nacional de Envejecimiento en México ENASEM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#inicio").click(function () {
+                $("#tablero").load("enasem.html");
+            });
+            $("#hipertension").click(function () {
+                $("#tablero").load("tableros/hipertensión.html");
+            });
+            $("#diabetes").click(function () {
+                $("#tablero").load("tableros/diabetes.html");
+            });
+            $("#cancer").click(function () {
+                $("#tablero").load("tableros/cancer.html");
+            });
+            $("#ataque").click(function () {
+                $("#tablero").load("tableros/ataque.html");
+            });
+            $("#depresion").click(function () {
+                $("#tablero").load("tableros/depresion.html");
+            });
+            $("#entidades").click(function () {
+                $("#tablero").load("tableros/entidades.html");
+            });
+            
+        });
+    </script>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+        <span class="w3-bar-item w3-right">Encuesta Nacional de Envejecimiento en México</span>
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+
+        <hr>
+        <i class="w3-bar-item w3-button w3-padding" id="inicio">Inicio</i>
+        <hr>
+        <div class="w3-container">
+            <h5>Datos estadísticos</h5>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <i class="w3-bar-item w3-button w3-padding" id="hipertension">Hipertensión</i>
+            <i class="w3-bar-item w3-button w3-padding" id="diabetes">Diabetes</i>
+            <i class="w3-bar-item w3-button w3-padding" id="cancer">Cáncer</i>
+            <i class="w3-bar-item w3-button w3-padding" id="ataque">Ataque al corazón</i>
+            <i class="w3-bar-item w3-button w3-padding" id="depresion">Depresión</i>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <h5>Datos geográficos</h5>
+        </div>
+        <i class="w3-bar-item w3-button w3-padding" id="entidades">Entidades</i>
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <!-- Header -->
+        <header class="w3-container" style="padding-top:22px">
+            <h5><b><i class="fa fa-dashboard"></i>Visualización de datos</b></h5>
+        </header>
+
+        <div class="w3-row-padding w3-margin-bottom">
+            <div class="w3-quarter">
+                <div class="w3-container w3-red w3-padding-16">
+                    <div class="w3-clear"></div>
+                    <h4>ENASEM</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-blue w3-padding-16">
+                    <div class="w3-clear"></div>
+                    <h4>Datos estadísticos</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-teal w3-padding-16">
+                    <div class="w3-clear"></div>
+                    <h4>Datos geográficos</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-orange w3-text-white w3-padding-16">
+                    <div class="w3-clear"></div>
+                    <h4>Proyecto</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-container" id="tablero">
+            <h4>ENASEM</h4>
+            <div class="w3-large w3-white">
+                <p>
+                    El Estudio Nacional de Salud y Envejecimiento (ENASEM) es un estudio nacional longitudinal de adultos de 50 años y mas en México.
+
+                    En 2001 se llevó acabo la encuesta basal, con representación nacional y urbano/rural de los adultos nacidos en 1951 o antes, y las encuestas de seguimiento se hicieron en 2003, 2012, 2015 y 2018. En 2012, se agregó una nueva muestra de adultos nacidos entre 1952 – 1962. De la misma manera, en 2018 se agregó una nueva cohorte de adultos nacidos entre 1963 y 1968 para refrescar la muestra.
+                </p>
+                <p>
+                    El estudio es un esfuerzo colaborativo de investigadores de la Universidad de Texas Medical Branch (UTMB), el Instituto Nacional de Estadística y Geografía (INEGI, México), la Universidad de Wisconsin, el Instituto Nacional de Geriatría (INGER, México), el Instituto Nacional de Salud Pública (INSP, México), y la Universidad de California Los Angeles (UCLA). El ENASEM está parcialmente financiado por el National Institutes of Health/National Institute on Aging (R01AG018016, R Wong, PI) en Estados Unidos y el Instituto Nacional de Estadística y Geografía (INEGI) en México.
+
+                    Actualmente, se planean una ronda adicional en 2021.
+
+                    
+                </p>
+                <p>Fuente: enasem.org</p>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-container w3-padding-16 w3-light-grey">
+                <h4></h4>
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            </footer>
+
+            <!-- End page content -->
+        </div>
+
+        <script>
+            // Get the Sidebar
+            var mySidebar = document.getElementById("mySidebar");
+
+            // Get the DIV with overlay effect
+            var overlayBg = document.getElementById("myOverlay");
+
+            // Toggle between showing and hiding the sidebar, and add overlay effect
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                    overlayBg.style.display = "none";
+                } else {
+                    mySidebar.style.display = 'block';
+                    overlayBg.style.display = "block";
+                }
+            }
+
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+                overlayBg.style.display = "none";
+            }
+        </script>
+
+</body>
+</html>
+
