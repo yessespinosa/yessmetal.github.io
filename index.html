@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Encuesta Nacional de Envejecimiento en México ENASEM</title>
+    <title>Encuesta Nacional de Envejecimiento en México - ENASEM</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -36,7 +36,9 @@
             $("#entidades").click(function () {
                 $("#tablero").load("tableros/entidades.html");
             });
-            
+            $("#depresionpred").click(function () {
+                $("#tablero").load("tableros/depresionpred.html");
+            });
         });
     </script>
 </head>
@@ -65,6 +67,7 @@
             <i class="w3-bar-item w3-button w3-padding" id="cancer">Cáncer</i>
             <i class="w3-bar-item w3-button w3-padding" id="ataque">Ataque al corazón</i>
             <i class="w3-bar-item w3-button w3-padding" id="depresion">Depresión</i>
+            <i class="w3-bar-item w3-button w3-padding" id="depresionpred">Depresión predicción</i>
         </div>
         <hr>
         <div class="w3-container">
